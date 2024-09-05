@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KP Farmer</string>
+    <string name="splash_screen_text1">Splash Screen Logo</string>
+    <string name="back_button_text">Back button</string>
+    <string name="speaker_turned_on">Speaker turned on</string>
+    <string name="speaker_turned_off">Speaker turned off</string>
+    <string name="app_logo">App logo</string>
+    <string name="select_your_language">Select your Language</string>
+    <string name="select_your_language_hindi">अपनी भाषा का चयन करें</string>
+</resources>
