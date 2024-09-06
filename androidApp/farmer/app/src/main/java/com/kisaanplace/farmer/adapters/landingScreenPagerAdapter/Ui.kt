@@ -39,7 +39,7 @@ fun LandingScreenPagerAdapter(
         Image(
             painter = painterResource(id = image),
             contentDescription = "$title image",
-            modifier = Modifier.height(160.dp),
+            modifier = Modifier.height(200.dp),
             contentScale = ContentScale.Crop
         )
         Spacer(

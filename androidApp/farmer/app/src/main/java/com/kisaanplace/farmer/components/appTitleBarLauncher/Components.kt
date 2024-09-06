@@ -1,5 +1,6 @@
 package com.kisaanplace.farmer.components.appTitleBarLauncher
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -30,7 +31,7 @@ internal fun AppTitleBarLauncherLogo(
     Image(
         painter = appLogo,
         contentDescription = stringResource(R.string.app_logo),
-        modifier = modifier.height(60.dp)
+        modifier = modifier
     )
 
 }
@@ -40,18 +41,18 @@ internal fun AppTitleBarLauncherHeadingAndSubHeading(
     title: String,
     subTitle: String? = null,
     smallFont: Boolean,
-    modifier: Modifier = Modifier,
+    @SuppressLint("ModifierParameter") modifier: Modifier = Modifier,
 ) {
     Column(
-        modifier = modifier.padding(12.dp),
+        modifier = modifier.padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = title,
             fontSize = if (smallFont) {
-                16.sp
+                18.sp
             } else {
-                20.sp
+                24.sp
             },
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Bold,
@@ -64,7 +65,7 @@ internal fun AppTitleBarLauncherHeadingAndSubHeading(
             Text(
                 text = subTitle,
                 textAlign = TextAlign.Center,
-                fontSize = 14.sp,
+                fontSize = 18.sp,
                 fontWeight = FontWeight.Medium,
                 fontFamily = Poppins
             )

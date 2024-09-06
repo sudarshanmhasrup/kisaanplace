@@ -1,7 +1,6 @@
 package com.kisaanplace.farmer.ui.selectAppLanguageScreen
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,9 +29,7 @@ fun SelectAppLanguageUi(
     modifier: Modifier = Modifier,
 ) {
 
-    var nextButtonState by remember {
-        mutableStateOf(false)
-    }
+    var nextButtonState by remember { mutableStateOf(false) }
 
     Column(
         modifier = modifier
@@ -83,7 +80,7 @@ fun SelectAppLanguageUi(
     showSystemUi = true
 )
 @Composable
-fun SelectAppLanguageUiPreview() {
+private fun SelectAppLanguageUiPreview() {
     SelectAppLanguageUi(
         navController = rememberNavController(),
         modifier = Modifier

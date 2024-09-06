@@ -42,8 +42,12 @@ internal fun AppTitleBarLauncher(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        AppTitleBarLauncherLogo()
-        Spacer(modifier = Modifier.height(12.dp))
+        AppTitleBarLauncherLogo(
+            modifier = Modifier.height(60.dp)
+        )
+        Spacer(
+            modifier = Modifier.height(12.dp)
+        )
         AppTitleBarLauncherHeadingAndSubHeading(
             title = title,
             subTitle = subTitle,

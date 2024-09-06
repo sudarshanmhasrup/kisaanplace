@@ -1,7 +1,5 @@
 package com.kisaanplace.farmer.data
 
-import androidx.compose.ui.res.stringResource
-import com.kisaanplace.farmer.R
 import com.kisaanplace.farmer.dataClasses.AppLanguage
 
 val appLanguageList: List<AppLanguage> = listOf(

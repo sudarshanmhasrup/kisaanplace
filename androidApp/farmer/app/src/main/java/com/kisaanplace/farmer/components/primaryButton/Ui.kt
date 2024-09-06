@@ -52,7 +52,7 @@ fun PrimaryButton(
 
 @Preview
 @Composable
-fun PrimaryButtonPreview() {
+private fun PrimaryButtonPreview() {
     PrimaryButton(
         title = stringResource(R.string.next),
         enabled = false,
