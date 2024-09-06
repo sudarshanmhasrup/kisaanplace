@@ -51,7 +51,7 @@ internal fun NavigationTopBarSpeakerButton() {
     var isTurnedOn by remember { mutableStateOf(true) }
 
     val speakerIcon = if (isTurnedOn) {
-        painterResource(id = R.drawable.ic_speaker_on_white)
+        painterResource(id = R.drawable.ic_speaker_turned_on)
     } else {
         painterResource(id = R.drawable.ic_speaker_turned_off)
     }

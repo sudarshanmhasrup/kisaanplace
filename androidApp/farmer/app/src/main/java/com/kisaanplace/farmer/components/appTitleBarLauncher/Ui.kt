@@ -1,5 +1,6 @@
 package com.kisaanplace.farmer.components.appTitleBarLauncher
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,16 +20,25 @@ import com.kisaanplace.farmer.ui.theme.backgroundColor
 @Composable
 internal fun AppTitleBarLauncher(
     title: String,
-    subTitle: String,
-    modifier: Modifier = Modifier
+    subTitle: String? = null,
+    smallFont: Boolean,
+    @SuppressLint("ModifierParameter") modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.padding(
+        modifier = if(smallFont) {
+            modifier.padding(
+                top = 10.dp,
+                bottom = 10.dp,
+                start = 24.dp,
+                end = 24.dp)
+        } else {
+            modifier.padding(
                 top = 40.dp,
                 bottom = 40.dp,
                 start = 24.dp,
                 end = 24.dp
-            ),
+            )
+        },
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -36,7 +46,8 @@ internal fun AppTitleBarLauncher(
         Spacer(modifier = Modifier.height(12.dp))
         AppTitleBarLauncherHeadingAndSubHeading(
             title = title,
-            subTitle = subTitle
+            subTitle = subTitle,
+            smallFont = smallFont
         )
     }
 }
@@ -49,6 +60,7 @@ private fun AppTitleBarLauncherPreview() {
     AppTitleBarLauncher(
         title = stringResource(id = R.string.select_your_language),
         subTitle = stringResource(id = R.string.select_your_language_hindi),
+        smallFont = false,
         modifier = Modifier
             .fillMaxWidth()
             .background(backgroundColor)

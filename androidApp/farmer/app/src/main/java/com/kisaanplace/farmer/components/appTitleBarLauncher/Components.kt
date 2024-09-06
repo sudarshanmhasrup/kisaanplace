@@ -1,6 +1,5 @@
 package com.kisaanplace.farmer.components.appTitleBarLauncher
 
-import android.icu.text.CaseMap.Title
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -14,10 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kisaanplace.farmer.R
+import com.kisaanplace.farmer.ui.theme.Poppins
 
 @Composable
 internal fun AppTitleBarLauncherLogo(
@@ -29,7 +30,7 @@ internal fun AppTitleBarLauncherLogo(
     Image(
         painter = appLogo,
         contentDescription = stringResource(R.string.app_logo),
-        modifier = modifier
+        modifier = modifier.height(60.dp)
     )
 
 }
@@ -37,26 +38,37 @@ internal fun AppTitleBarLauncherLogo(
 @Composable
 internal fun AppTitleBarLauncherHeadingAndSubHeading(
     title: String,
-    subTitle: String,
-    modifier: Modifier = Modifier
+    subTitle: String? = null,
+    smallFont: Boolean,
+    modifier: Modifier = Modifier,
 ) {
     Column(
-        modifier = modifier,
+        modifier = modifier.padding(12.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = title,
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold
+            fontSize = if (smallFont) {
+                16.sp
+            } else {
+                20.sp
+            },
+            textAlign = TextAlign.Center,
+            fontWeight = FontWeight.Bold,
+            fontFamily = Poppins
         )
         Spacer(
             modifier = Modifier.height(12.dp)
         )
-        Text(
-            text = subTitle,
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Medium
-        )
+        if (subTitle != null) {
+            Text(
+                text = subTitle,
+                textAlign = TextAlign.Center,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Medium,
+                fontFamily = Poppins
+            )
+        }
     }
 }
 
@@ -72,6 +84,7 @@ private fun AppTitleBarLauncherHeadingAndSubHeadingPreview() {
     AppTitleBarLauncherHeadingAndSubHeading(
         title = stringResource(R.string.select_your_language),
         subTitle = stringResource(R.string.select_your_language_hindi),
+        smallFont = false,
         modifier = Modifier.fillMaxWidth()
             .padding(16.dp)
     )

@@ -5,6 +5,7 @@
     <style name="Theme.KPFarmer" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
     </style>
 
     <!-- Customized splash screen theme -->

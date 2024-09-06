@@ -7,4 +7,19 @@
     <string name="app_logo">App logo</string>
     <string name="select_your_language">Select your Language</string>
     <string name="select_your_language_hindi">अपनी भाषा का चयन करें</string>
+    <string name="next">Next</string>
+    <string name="english">English</string>
+    <string name="english_hindi">अंग्रेज़ी</string>
+    <string name="hindi">Hindi</string>
+    <string name="hindi_hindi">हिंदी</string>
+    <string name="marathi">Marathi</string>
+    <string name="marathi_hindi">मराठी</string>
+    <string name="welcome_message">Hey there, Welcome to Kisaan Place’s Farmer App.</string>
+    <string name="get_started">Get Started</string>
+    <string name="sell_your_products">Sell your products</string>
+    <string name="page_description_1">Our app lets you sell your agricultural goods and produce directly to the consumers.</string>
+    <string name="pager_description_02">Earn extra profit on your goods and products because now there\'re no middlemen.</string>
+    <string name="make_extra_profit">Make extra profit</string>
+    <string name="pager_description_03">Our app lets you manage all your transactions, and you’ll always have a track of your sales and expenses.</string>
+    <string name="manage_your_transactions">Manage your transactions</string>
 </resources>

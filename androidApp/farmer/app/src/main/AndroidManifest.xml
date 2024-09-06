@@ -11,12 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppStarting"
+        android:resizeableActivity="false"
+        android:screenOrientation="portrait"
         tools:targetApi="33">
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppStarting">
+            android:theme="@style/Theme.AppStarting"
+            android:configChanges="fontScale">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
